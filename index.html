@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <nav class="navbar navbar-expand-md site-nav">
-      <div class="container">
+      <div class="container site-nav-container">
         <a class="navbar-brand" href="#">
           <img class="img-fluid" src="./img/logo.svg" alt="logo img" width="139" height="20">
         </a>
@@ -20,7 +20,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse site-nav__list--wrapper" id="navbarSupportedContent">
-          <ul class="navbar-nav site-nav__list">
+          <ul class="navbar-nav align-items-center site-nav__list">
             <li class="nav-item site-nav__item">
               <a class="nav-link p-0 site-nav__link" aria-current="page" href="#">Home</a>
             </li>
@@ -38,10 +38,30 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="request__button">Request Invite</a>
+        <a href="#" class="request__button d-none d-md-block">Request Invite</a>
       </div>
     </nav>
   </header>
+
+  <div class="hero">
+    <div class="container-fluid container-md">
+      <div class="row align-items-md-center justify-content-center justify-content-md-start">
+        <div class="col-12 col-sm-9 col-md-6 text-center text-md-start">
+          <h1 class="hero__title">Next generation
+            digital banking</h1>
+          <p class="hero__text">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
+          <a href="#" class="request__button d-inline-block">Request Invite</a>
+        </div>
+        <div class="col-12 col-md-6 hero-img">
+          <img class="img-fluid d-none d-md-block" src="./img/hero-bg-img.png" alt="hero img">
+
+          <img class="img-fluid d-none d-sm-block d-md-none" src="./img/phones-mobile@2x.png" alt="hero img">
+
+          <img class="img-fluid d-block d-sm-none" src="./img/phones-mobile.png" alt="hero img">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

@@ -42,6 +42,7 @@ html{
 body{
   padding: 0;
   margin: 0;
+  margin-top: 76px;
   font-family: "Public Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -74,16 +75,27 @@ body{
   color: #fff;
 }
 /* SITE HEADER  */
+.site-header{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
 .site-nav{
+  padding: 0;
+  background-color: #fff;
+}
+.site-nav-container{
+  position: relative;
   padding-top: 18px;
   padding-bottom: 18px;
-  background-color: #fff;
 }
 .navbar-toggler:focus{
   box-shadow: none;
 }
 .navbar-toggler-icon{
-  background-image: url("../img/toggler-open.svg");
+  background-image: url("../img/toggler-open@2x.png");
 }
 .site-nav__list--wrapper{
   flex-grow: 0;
@@ -101,12 +113,60 @@ body{
 .site-nav__link:hover{
   color: var(--dark);
 }
+/* HERO  */
+.hero{
+  position: relative;
+  padding-top: 170px;
+  padding-bottom: 140px;
+  background-color: #F2F2F2;
+}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 100;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: var(--dark);
+}
+.hero__text {
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.hero-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  z-index: 88;
+}
 
 @media screen and (max-width: 1199px) {
   .container{
     max-width: 100%;
     padding-left: 50px;
     padding-right: 50px;
+  }
+  /* hero  */
+  .hero{
+    padding-top: 85px;
+    padding-bottom: 38px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .container{
+    max-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  /* hero  */
+  .hero{
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .hero__title{
+    font-size: 46px;
+    line-height: 60px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -116,9 +176,22 @@ body{
     padding-left: 30px;
   }
   /* header  */
+  .site-header--click{
+    height: 100vh;
+    background: linear-gradient(180deg, #2D314D 0%, rgba(45, 49, 77, 0.0001) 100%);
+  }
+  .navbar-toggler-icon--close{
+    width: 1em;
+    height: 1.3em;
+    background-image: url("../img/toggler-close.svg");
+  }
+  .site-nav__list--wrapper{
+    width: 90%;
+    position: absolute;
+    top: calc(100% + 24px);
+  }
   .site-nav__list{
     padding: 32px;
-    align-items: center;
     background-color: #fff;
   }
   .site-nav__item:not(:first-child){
@@ -133,17 +206,41 @@ body{
   .site-nav__link:hover{
     color: var(--text-color);
   }
-  .site-nav .request__button{
-    display: none;
+  /* hero  */
+  .hero{
+    padding-top: 0;
+  }
+  .hero-img{
+    position: static;
+    order: -1;
+  }
+  .hero-img > img{
+    width: 100%;
+    height: 650px;
   }
 }
 @media screen and (max-width: 575px) {
   .container{
-    max-width: 100%;
     padding-right: 24px;
     padding-left: 24px;
   }
-  .site-nav .request__button{
-    display: none;
+  /* .hero  */
+  .hero{
+    padding-bottom: 88px;
+  }
+  .hero__title{
+    font-size: 40px;
+    line-height: 47px;
+  }
+  .hero__text{
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .hero-img > img{
+    width: 100%;
+    height: auto;
+  }
+  .site-nav__list--wrapper{
+    width: 87.8%;
   }
 }
